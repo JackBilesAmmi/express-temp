@@ -8,11 +8,11 @@ const http = require('http');
 var cookieParser = require('cookie-parser');
 
 function EXPRESS() {
-    this.port = 8080 || process.env.PORT;
+    this.port = process.env.PORT || 8080;
     this.app = exp();
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
-    this.app.use(exp.static('client'));
+    //this.app.use(exp.static('client'));
     this.app.use(cookieParser());
 };
 
