@@ -9,5 +9,6 @@ const server = require('./server/express_webserver.js');
 var app = new server.EXPRESS().listen();
 
 app.get('/',function(req,res){
-  res.sendFile(__dirname+'/index.html');
+  let response = res;
+  response.sendFile(__dirname+'/index.html');
 });
